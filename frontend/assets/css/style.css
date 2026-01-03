@@ -1,0 +1,428 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  color: #ccc;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+/* =========================
+   AUTH PAGES (SIGN IN / UP)
+========================= */
+.login-container,
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-box,
+.signup-box {
+  background: #111;
+  border: 1px solid #444;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.login-box {
+  width: 350px;
+}
+
+.signup-box {
+  width: 450px;
+}
+
+.logo,
+.logo-box {
+  background: #222;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+label {
+  font-size: 14px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin: 8px 0 15px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  padding: 10px;
+  background: #a855f7;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-upload {
+  width: 45px;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+}
+
+.password-box span {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* =========================
+   TOP BAR & NAVIGATION
+========================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+.nav a,
+.nav span {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav .active {
+  background: #2563eb;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* =========================
+   AVATAR & DROPDOWN
+========================= */
+.avatar img {
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.avatar.big {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #444;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 55px;
+  background: #222;
+  border: 1px solid #444;
+  padding: 10px;
+  z-index: 10;
+}
+
+.dropdown a {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.employee-card {
+  position: relative;
+  border: 1px solid #444;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.employee-card img {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   STATUS DOTS
+========================= */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.green { background: #22c55e; }
+.yellow { background: #facc15; }
+.blue { background: #3b82f6; }
+
+/* =========================
+   PROFILE PAGE
+========================= */
+.profile-header {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.tabs button {
+  margin: 10px;
+  padding: 8px 15px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.component {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding: 8px 0;
+}
+
+/* =========================
+   ATTENDANCE
+========================= */
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.date-controls {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.date-controls button {
+  padding: 6px 10px;
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+
+/* =========================
+   TIME OFF
+========================= */
+.leave-summary {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.status-pending { color: orange; }
+.status-approved { color: #22c55e; }
+.status-rejected { color: #ef4444; }
+
+.action-btn {
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.approve { background: #22c55e; }
+.reject { background: #ef4444; }
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: #111;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+/* =========================
+   PROFILE PAGE POLISH
+========================= */
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid #333;
+}
+
+.profile-basic,
+.profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.info-row .label {
+  min-width: 90px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.avatar.big {
+  width: 120px;
+  height: 120px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.tabs {
+  padding: 20px;
+}
+
+.tabs button {
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background: #333;
+}
+
+
+/* ===== DASHBOARD POLISH ===== */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.new-btn {
+  background: #a855f7;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.employee-card {
+  background: #111;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.employee-card:hover {
+  transform: scale(1.03);
+  border-color: #a855f7;
+}
+
+.check-actions {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+}
