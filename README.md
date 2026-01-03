@@ -9,6 +9,7 @@ DayFlow is a simple Human Resource Management System built for the *Odoo Hackath
 
 - Below is a demo admin setup for testing purposes.
 - Admin Credentials
+  
     Email: admin@gmail.com
     Password (plain): admin123
     Password (Hash value): $2a$12$Yk12ckg7xgwoPUzNmUR8n.sr7GL.Ac9S6MrF15wh2vqtN0HmagfMm 
