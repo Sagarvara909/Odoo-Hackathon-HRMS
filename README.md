@@ -3,14 +3,15 @@
 DayFlow is a simple Human Resource Management System built for the *Odoo Hackathon* using PHP, MySQL, HTML, CSS, and JavaScript.
 
 ---
+## Demo Admin Account (Manual Setup)
+- For security reasons, Admin users are not created via the Sign Up page.
+- Admin accounts must be manually inserted into the database.
 
-## Demo Login
-
-### Admin
-Email: admin@gmail.com  
-Password: admin123  
-
-> Admin users are created manually in the database.
+- Below is a demo admin setup for testing purposes.
+- Admin Credentials
+    Email: admin@gmail.com
+    Password (plain): admin123
+    Password (Hash value): $2a$12$Yk12ckg7xgwoPUzNmUR8n.sr7GL.Ac9S6MrF15wh2vqtN0HmagfMm 
 
 ### Employee
 - Employees sign up using the *Sign Up* page
